@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Qearch</string>
+    <string name="keyword">Keyword</string>
 </resources>

@@ -8,5 +8,6 @@ data class Item(
     val comments_count: Int?,
     val likes_count: Int?,
     val created_at: String?,
+    // user-class
     val user: User?
 )
