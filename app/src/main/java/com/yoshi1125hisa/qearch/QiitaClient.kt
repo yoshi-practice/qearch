@@ -1,6 +1,5 @@
 package com.yoshi1125hisa.qearch
 
-import android.content.ClipData
 import retrofit2.Call
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -10,8 +9,11 @@ interface QiitaClient {
     @GET("/api/v2/items")
     fun items(@Query("query") query: String? = null,
               @Query("page") page: Int = 1,
-              @Query("per_page") perPage: Int = 50): Call<List<ClipData.Item>>
+              @Query("per_page") perPage: Int = 50): Call<List<Item>>
 
+    /**
+     * Companion object for the factory
+     */
     companion object {
         fun create(): QiitaClient {
             val retrofit = retrofit2.Retrofit.Builder()
